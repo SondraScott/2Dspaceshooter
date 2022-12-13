@@ -14,6 +14,13 @@ public class Laser : MonoBehaviour
 
        if(transform.position.y > 8f)
        {
+        //check if this object has a parant
+        //and if it does 
+        //destroy parent too
+        if(transform.parent != null)
+        {
+            Destroy(transform.parent.gameObject);
+        }
          Destroy(this.gameObject);
        }
     }
